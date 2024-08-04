@@ -1,10 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const RegistrerScreen: React.FC = () => {
+const RegistrerScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Ya funciona</Text>
+      <Text style={styles.title}>StoryBoock's</Text>
+      <Text>Nombre de Usuario:</Text>
+
+      <Text>Contraseña</Text>
+
     </View>
   );
 };
@@ -12,10 +16,22 @@ const RegistrerScreen: React.FC = () => {
 //style
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor: '#34495e',
+    width: '100%',
+    height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+    
   },
+  title: {
+    color: '#b03a2e',
+    fontSize: 46,
+    
+  },
+  input: {
+    color: 'withe',
+  },
+  
 });
 
-export default RegistrerScreen; // Exportación por defecto
+export default RegistrerScreen;
