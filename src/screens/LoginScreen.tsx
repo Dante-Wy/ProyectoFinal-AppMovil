@@ -1,37 +1,61 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+//Se instalo las bibliotecas Formik & Yup, para mejorar la validacion de datows en el siguiente taller.
+import React, { useState } from 'react';
+import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
-const RegistrerScreen = () => {
+const LoginA: React.FC = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>StoryBoock's</Text>
-      <Text>Nombre de Usuario:</Text>
+    <View style={styles.screnGold}>
+      <View style={styles.contForm}>
+        <Text style={styles.logo}>Story Book - Login</Text>
+        <Text style={styles.titulo}>Nombre de Usuario:</Text>
+        <TextInput style={styles.input} onChangeText={setUsername} value={username} placeholder="Ingrese su nombre de usuario"/>
 
-      <Text>Contraseña</Text>
+        <Text style={styles.titulo}>Contraseña:</Text>
+        <TextInput style={styles.input} onChangeText={setPassword} value={password} placeholder="Ingrese su contraseña"secureTextEntry/>
 
+        <Button title="Ingresar"/>
+      </View>
     </View>
   );
 };
 
-//style
+//nop
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#34495e',
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    
+  contForm: {
+    backgroundColor: '#1c2833',
+    paddingTop: 60,
+    paddingBottom: 60,
+    paddingLeft: 40,
+    paddingRight: 40,
   },
-  title: {
-    color: '#b03a2e',
-    fontSize: 46,
-    
+  logo: {
+    color:'#f39c12',
+    fontSize: 40,
+    textAlign:'center',
+    paddingBottom:40,
+  },
+  titulo: {
+    color:'#fdfefe',
+    fontSize:14,
+    marginBottom:8,
+  },
+  screnGold: {
+    display:'flex',
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center',
+    backgroundColor:'#34495e',
   },
   input: {
-    color: 'withe',
+    height:40,
+    borderColor:'gray',
+    borderWidth:1,
+    marginBottom:12,
+    paddingHorizontal:8,
   },
-  
 });
 
-export default RegistrerScreen;
+export default LoginA;

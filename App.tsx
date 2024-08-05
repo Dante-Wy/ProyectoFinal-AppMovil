@@ -8,8 +8,8 @@ import LoginScreen from './src/screens/LoginScreen';
 
 const App = () => {
   return (
-      //<RegistrerScreen />
-      <LoginScreen />
+      <RegistrerScreen />
+      //<LoginScreen />
   );
 };
 
